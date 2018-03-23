@@ -1,9 +1,3 @@
-/**
- * @(#)ArithmeticSlices413.java, 2018-01-06.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 /**
  * ArithmeticSlices413
