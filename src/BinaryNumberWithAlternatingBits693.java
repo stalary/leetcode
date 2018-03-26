@@ -5,6 +5,7 @@
  *
  * @author lirongqian
  * @since 2018/03/26
+ *
  */
 public class BinaryNumberWithAlternatingBits693 {
 
