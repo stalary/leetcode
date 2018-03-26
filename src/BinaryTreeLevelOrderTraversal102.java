@@ -46,6 +46,7 @@ public class BinaryTreeLevelOrderTraversal102 {
                     queue.add(node.right);
                 }
             }
+            // 当要从底部开始遍历时，result.add(0，list);
             result.add(list);
         }
         return result;
