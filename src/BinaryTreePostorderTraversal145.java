@@ -1,12 +1,12 @@
-
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
 /**
  * BinaryTreePostorderTraversal145
+ * <p>
+ * 后序打印二叉树
  *
- * 倒序打印二叉树
  * @author lirongqian
  * @since 2018/03/26
  */
@@ -20,26 +20,24 @@ public class BinaryTreePostorderTraversal145 {
     }
 
     public List<Integer> postorderTraversal(TreeNode root) {
-        TreeNode temp = root;
-        List<Integer> list = new ArrayList<>();
+        LinkedList<Integer> ans = new LinkedList<>();
         Stack<TreeNode> stack = new Stack<>();
-        while (root != null) {
-            for (; root.left != null; root = root.left) {
-                stack.push(root);
+        if (root == null) {
+            return ans;
+        }
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            // 根要最后在遍历，所以每次都要往头放，最后压到底部
+            ans.addFirst(cur.val);
+            // 虽然栈弹出的顺序是与遍历顺序相反，但是因为每次放入list中是放在头部，所以此处左结点先入栈
+            if (cur.left != null) {
+                stack.push(cur.left);
             }
-            while (root != null && (root.right == null || root.right == temp)) {
-                list.add(root.val);
-                temp = root;
-                if (stack.empty()) {
-                    return list;
-                }
-                root = stack.pop();
-            }
-            if (root != null) {
-                stack.push(root);
-                root = root.right;
+            if (cur.right != null) {
+                stack.push(cur.right);
             }
         }
-        return list;
+        return ans;
     }
 }
