@@ -5,7 +5,7 @@ import java.util.LinkedList;
  *
  * 按符号进行运算，数字就相加，C是减去前一个数字，D是加上上一个数字的两倍，+是加上上一个数字和倒数第二个数字
  * @author lirongqian
- * @since 2017/11/20
+ * @since 2018/03/26
  */
 public class BaseballGame682 {
 
