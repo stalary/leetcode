@@ -1,9 +1,3 @@
-/**
- * @(#)BinaryTreeLevelOrderTraversal102.java, 2018-01-02.
- * <p>
- * Copyright 2018 Youdao, Inc. All rights reserved.
- * YOUDAO PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 
 import java.util.ArrayList;
 import java.util.LinkedList;
