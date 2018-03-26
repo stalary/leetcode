@@ -4,7 +4,7 @@
  * 输入一个正数，转化为二进制，判断是否为跳跃式
  *
  * @author lirongqian
- * @since 2017/11/22
+ * @since 2018/03/26
  */
 public class BinaryNumberWithAlternatingBits693 {
 

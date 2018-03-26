@@ -9,7 +9,7 @@ import java.util.List;
  * 输入一颗二叉树，输出所有从根出发的路径
  *
  * @author lirongqian
- * @since 21/12/2017
+ * @since 2018/03/26
  */
 public class BinaryTreePaths257 {
 
