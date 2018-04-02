@@ -6,6 +6,7 @@ import java.util.Set;
  * UniqueMorseCodeWords804
  *
  * 计算一共可以转化为多少种摩丝密码
+ *
  * @author lirongqian
  * @since 2018/04/02
  */
