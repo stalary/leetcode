@@ -7,6 +7,12 @@
  */
 public class UniquePaths62 {
 
+    /**
+     * 动态规划的思想，最后到达的地方即为所要求的值
+     * @param m
+     * @param n
+     * @return
+     */
     public int uniquePaths(int m, int n) {
         if (m == 1 || n == 1) {
             return 1;
