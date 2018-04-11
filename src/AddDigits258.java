@@ -26,10 +26,12 @@ public class AddDigits258 {
             return num;
         }
         int sum = 0;
+        // 将每一位进行求和
         while (num > 10) {
             sum += num % 10;
             num /= 10;
         }
+        // 加上最后一位数
         sum += num;
         if (sum < 10) {
             return sum;
