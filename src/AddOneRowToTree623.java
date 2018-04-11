@@ -9,13 +9,30 @@
  */
 public class AddOneRowToTree623 {
 
-    public static void main(String[] args) {
-
-    }
 
     /**
      * 可以先假定1为添加左子树，0为添加右子树，通过递归即可完成结点的添加
      * 因为当d为2时即加在根结点左右儿子上，所以可以巧妙的运用2来判断是否需要加入
+     *Input:
+     * A binary tree as following:
+     *        4
+     *      /   \
+     *     2     6
+     *    / \   /
+     *   3   1 5
+     *
+     * v = 1
+     *
+     * d = 2
+     *
+     * Output:
+     *        4
+     *       / \
+     *      1   1
+     *     /     \
+     *    2       6
+     *   / \     /
+     *  3   1   5
      *
      * @param root
      * @param v
