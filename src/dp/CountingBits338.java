@@ -1,8 +1,9 @@
+package dp;
 
 import java.util.Arrays;
 
 /**
- * CountingBits338
+ * dp.CountingBits338
  *
  * 给定一个数字n，求出n范围内每个数字的二进制中1的个数
  * @author lirongqian

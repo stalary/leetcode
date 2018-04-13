@@ -1,5 +1,7 @@
+package dp;
+
 /**
- * PartitionEqualSubsetSum416
+ * dp.PartitionEqualSubsetSum416
  * 判断数组是否能够分成两个相等的部分
  * @author lirongqian
  * @since 2018/04/13

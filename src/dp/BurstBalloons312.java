@@ -1,5 +1,7 @@
+package dp;
+
 /**
- * BurstBalloons312
+ * dp.BurstBalloons312
  * 求扎破气球获得的最大硬币数量
  * @author lirongqian
  * @since 2018/04/07

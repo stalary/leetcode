@@ -1,6 +1,7 @@
+package dp;
 
 /**
- * ClimbingStairs70
+ * dp.ClimbingStairs70
  *
  * 一个人每次可以走一步或者两步，给定台阶数量，输出方法的数量
  * @author lirongqian

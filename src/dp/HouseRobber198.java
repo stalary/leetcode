@@ -1,6 +1,7 @@
+package dp;
 
 /**
- * HouseRobber198
+ * dp.HouseRobber198
  * <p>
  * 给定一个数组，每一个元素代表钱数，不可以偷取相邻的元素，求可以获取到的最大的金额
  *

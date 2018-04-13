@@ -1,8 +1,10 @@
+package dp;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * LongestContinuousIncreasingSubsequence674
+ * dp.LongestContinuousIncreasingSubsequence674
  *
  * 找出最长的递增子序列
  * @author lirongqian

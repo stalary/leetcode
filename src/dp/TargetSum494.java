@@ -1,5 +1,7 @@
+package dp;
+
 /**
- * TargetSum494
+ * dp.TargetSum494
  * 给定一个数组，通过正负号来使数组中所有元素相加为目标值
  *
  * @author lirongqian

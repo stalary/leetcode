@@ -1,7 +1,9 @@
+package dp;
+
 import java.util.*;
 
 /**
- * LongestIncreasingSubsequence300
+ * dp.LongestIncreasingSubsequence300
  * 最长递增序列
  *
  * @author lirongqian

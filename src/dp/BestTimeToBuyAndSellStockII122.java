@@ -1,5 +1,7 @@
+package dp;
+
 /**
- * BestTimeToBuyAndSellStockII122
+ * dp.BestTimeToBuyAndSellStockII122
  *
  * 给一个数组股票，每次卖出买入，求出最大利润
  * 与121的区别是，每次买入后立马卖出
