@@ -1,5 +1,3 @@
-package dp;
-
 /**
  * NumberOfIslands200
  * 求小岛的数量
