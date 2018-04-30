@@ -15,8 +15,6 @@ public class LongestIncreasingSubsequence300 {
         System.out.println(new LongestIncreasingSubsequence300().lengthOfLIS(new int[]{
                 11, 12, 13, 14, 15, 6, 7, 8, 101, 18
         }));
-        List<Integer> list = new LinkedList<>();
-        list.add(list.get(2), 3);
     }
 
     /**
