@@ -39,7 +39,7 @@ public class DecodeString394 {
                 for (int j = 0; j < times; j += 1) {
                     sb.append(str);
                 }
-                // 合并字符串，弹出""，加入添加字母后的字符串
+                // ·合并字符串，弹出""，加入添加字母后的字符串
                 result.push(result.pop() + sb.toString());
             } else {
                 result.push(result.pop() + ch);
