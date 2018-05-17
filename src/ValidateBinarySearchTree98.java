@@ -39,4 +39,19 @@ public class ValidateBinarySearchTree98 {
         }
         return true;
     }
+
+    public boolean isValidBST1(TreeNode root) {
+        return helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+
+    public boolean helper(TreeNode root, long min, long max){
+        if(root == null) {
+            return true;
+        }
+        // 当前元素不满足条件时跳出
+        if(root.val >= max || root.val <= min) {
+            return false;
+        }
+        return helper(root.left, min, root.val) && helper(root.right, root.val, max);
+    }
 }
