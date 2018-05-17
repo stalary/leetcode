@@ -5,11 +5,11 @@ import java.util.Stack;
 
 /**
  * BinaryTreeInorderTraversal94
- *
+ * <p>
  * 二叉树的中序遍历
+ *
  * @author lirongqian
  * @since 2018/03/26
- *
  */
 public class BinaryTreeInorderTraversal94 {
 
@@ -22,22 +22,27 @@ public class BinaryTreeInorderTraversal94 {
 
     /**
      * 使用迭代的方法实现
+     *
      * @param root
      * @return
      */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode cur = root;
-        while (cur != null || !stack.isEmpty()) {
-            // 找到最左边的子结点
-            while (cur != null) {
-                stack.push(cur);
-                cur = cur.left;
+        while (root != null || !stack.empty()) {
+            // 依次查找最左结点
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
             }
-            cur = stack.pop();
-            list.add(cur.val);
-            cur = cur.right;
+            // 输出中间根
+            root = stack.pop();
+            list.add(root.val);
+            // 遍历右节点
+            root = root.right;
         }
         return list;
     }
