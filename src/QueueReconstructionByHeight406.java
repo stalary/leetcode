@@ -31,7 +31,7 @@ public class QueueReconstructionByHeight406 {
         Arrays.sort(people, (p1, p2) -> p1[0] != p2[0] ? Integer.compare(p2[0], p1[0]) : Integer.compare(p1[1], p2[1]));
         // [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
         List<int[]> list = new LinkedList<>();
-        // 当第第二个数相同时，后出现的放到前面
+        // 前面有几个元素就放到第几个
         for (int[] ppl : people) {
             list.add(ppl[1], ppl);
         }
