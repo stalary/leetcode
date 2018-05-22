@@ -24,12 +24,14 @@ public class CountingBits338 {
         if (num == 0) {
             return new int[]{0};
         }
-        int[] arr = new int[num + 1];
-        arr[0] = 0;
-        arr[1] = 1;
+        int[] dp = new int[num + 1];
+        dp[0] = 0;
+        dp[1] = 1;
         for (int i = 2; i <= num; i++) {
-            arr[i] = arr[i / 2] + i % 2;
+            // 当前数字等于上一位加上余数
+            // 例如：5=2(1)+1=2
+            dp[i] = dp[i / 2] + i % 2;
         }
-        return arr;
+        return dp;
     }
 }
