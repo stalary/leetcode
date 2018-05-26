@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * FindAllNumbersDisappearedInAnArray448
@@ -15,7 +17,7 @@ public class FindAllNumbersDisappearedInAnArray448 {
         int[] nums = new int[]{
                 4, 3, 2, 7, 8, 2, 3, 1
         };
-        System.out.println(findDisappearedNumbers(nums));
+        System.out.println(new FindAllNumbersDisappearedInAnArray448().findDisappearedNumbers1(nums));
     }
 
     /**
@@ -23,7 +25,7 @@ public class FindAllNumbersDisappearedInAnArray448 {
      * @param nums
      * @return
      */
-    public static List<Integer> findDisappearedNumbers(int[] nums) {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             int val = Math.abs(nums[i]) - 1;
@@ -34,6 +36,24 @@ public class FindAllNumbersDisappearedInAnArray448 {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) {
                 list.add(i + 1);
+            }
+        }
+        return list;
+    }
+
+    public List<Integer> findDisappearedNumbers1(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return new ArrayList<>();
+        }
+        int len = nums.length;
+        boolean[] arr = new boolean[len + 1];
+        List<Integer> list = new ArrayList<>();
+        for (int num : nums) {
+            arr[num] = true;
+        }
+        for (int i = 1; i <= len; i++) {
+            if (!arr[i]) {
+                list.add(i);
             }
         }
         return list;
