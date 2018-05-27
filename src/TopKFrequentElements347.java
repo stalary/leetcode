@@ -17,7 +17,7 @@ public class TopKFrequentElements347 {
         System.out.println(new TopKFrequentElements347().topKFrequent(nums, 2));
     }
 
-    public List<Integer> topKFrequent(int[] nums, int k) {
+    public List<Integer> topKFrequent1(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : nums) {
             map.put(i, map.getOrDefault(i, 0) + 1);
@@ -38,4 +38,52 @@ public class TopKFrequentElements347 {
         }
         return result;
     }
+
+    /**
+     * 使用优先队列进行存储对象，弹出最大
+     * @param nums
+     * @param k
+     * @return
+     */
+    public List<Integer> topKFrequent(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i : nums) {
+            map.put(i, map.getOrDefault(i, 0) + 1);
+        }
+        PriorityQueue<Pair> pairs = new PriorityQueue<>();
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            pairs.add(new Pair(entry.getKey(), entry.getValue()));
+        }
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < k; i++) {
+            result.add(pairs.poll().num);
+        }
+
+        return result;
+    }
+
+    public static class Pair implements Comparable<Pair> {
+
+        int num;
+        int count;
+
+        public Pair(int num, int count) {
+            this.num = num;
+            this.count = count;
+        }
+
+        @Override
+        public int compareTo(Pair other) {
+            return other.count - this.count;
+        }
+
+        @Override
+        public String toString() {
+            return "Pair{" +
+                    "num=" + num +
+                    ", count=" + count +
+                    '}';
+        }
+    }
+
 }
