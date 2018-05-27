@@ -21,7 +21,7 @@ public class BinaryTreeInorderTraversal94 {
     }
 
     /**
-     * 使用迭代的方法实现
+     * 使用栈的方法实现
      *
      * @param root
      * @return
