@@ -12,16 +12,15 @@ public class ConvertBSTToGreaterTree538 {
         TreeNode root = new TreeNode(5);
         root.left = new TreeNode(2);
         root.right = new TreeNode(13);
-        TreeNode out = convertBST(root);
+        TreeNode out = new ConvertBSTToGreaterTree538().convertBST(root);
         System.out.println(out.val);
         System.out.println(out.left.val);
         System.out.println(out.right.val);
     }
 
 
-    static int sum = 0;
-
-    public static TreeNode convertBST(TreeNode root) {
+    int sum = 0;
+    public TreeNode convertBST(TreeNode root) {
         convert(root);
         return root;
     }
@@ -30,7 +29,7 @@ public class ConvertBSTToGreaterTree538 {
      * 因为左儿子肯定是最小的数，而sum是逐渐增大的，所以最后再对左儿子进行递归
      * @param node
      */
-    public static void convert(TreeNode node) {
+    public void convert(TreeNode node) {
         if (node == null) {
             return;
         }
