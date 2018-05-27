@@ -58,4 +58,17 @@ public class PalindromeLinkedList234 {
         }
         return prev;
     }
+
+    public ListNode reverse1(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        // 移动到倒数第二个元素，获取当前链表
+        ListNode node = reverse1(head.next);
+        // 下下个元素设置为当前结点(跳过末尾结点)
+        head.next.next = head;
+        // 断开与之前结点的关联
+        head.next = null;
+        return node;
+    }
 }
