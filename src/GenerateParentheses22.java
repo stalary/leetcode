@@ -35,7 +35,7 @@ public class GenerateParentheses22 {
             list.add(str);
             return;
         }
-        // 当开括号的数量小于最大值时，继续增加
+        // 当开括号的数量小于最大值时，继续增加，左括号来增加到最大值，实现全排列
         if (open < max) {
             backtrack(list, str + "(", open + 1, close, max);
         }
