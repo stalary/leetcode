@@ -2,6 +2,7 @@
  * DiameterOfBinaryTree543
  *
  * 求二叉树的最长路径
+ *
  * 思路：
  * 递归的遍历二叉树的左儿子和右儿子，并对路径求和，每次求最大的路径
  * @author lirongqian
