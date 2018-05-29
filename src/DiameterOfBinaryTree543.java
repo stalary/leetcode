@@ -15,16 +15,16 @@ public class DiameterOfBinaryTree543 {
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
-        System.out.println(diameterOfBinaryTree(root));
+        System.out.println(new DiameterOfBinaryTree543().diameterOfBinaryTree(root));
     }
 
-    static int max = 0;
-    public static int diameterOfBinaryTree(TreeNode root) {
+    int max = 0;
+    public int diameterOfBinaryTree(TreeNode root) {
         maxDepth(root);
         return max;
     }
 
-    public static int maxDepth(TreeNode root) {
+    public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
