@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * RotateImage48
  * 旋转二维数组
@@ -32,6 +30,7 @@ public class RotateImage48 {
      * @param matrix
      */
     public void rotate(int[][] matrix) {
+        // 横纵坐标交换
         for (int i = 0; i < matrix.length; i++) {
             for (int j = i; j < matrix[0].length; j++) {
                 int temp = matrix[i][j];
@@ -39,14 +38,15 @@ public class RotateImage48 {
                 matrix[j][i] = temp;
             }
         }
+        // 交换列
         for (int i = 0; i < matrix.length; i++) {
+            // 设置交换边界为中点
             for (int j = 0; j < matrix.length / 2; j++) {
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[i][matrix.length - 1 - j];
                 matrix[i][matrix.length - 1 - j] = temp;
             }
         }
-        System.out.println(Arrays.deepToString(matrix));
     }
 
 }
