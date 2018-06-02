@@ -28,6 +28,7 @@ public class BinaryTreeLevelOrderTraversal102 {
         queue.add(root);
         while (queue.size() > 0) {
             List<Integer> list = new ArrayList<>();
+            // 获取当前层的数量，依次遍历
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
