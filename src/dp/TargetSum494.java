@@ -22,7 +22,7 @@ public class TargetSum494 {
      * sum(P) - sum(N) = target
      * sum(P) + sum(N) + sum(P) - sum(N) = target + sum(P) + sum(N)
      * 2 * sum(P) = target + sum(nums)
-     * 所以当target+sum不满足偶数时或者sum小于s时，即没有可以达到目标的值
+     * 所以当target+sum不满足偶数时或者sum小于target时，即没有可以达到目标的值
      * 所以我们只需要查找P的数量即可
      *
      * @param nums
@@ -34,6 +34,7 @@ public class TargetSum494 {
         for (int n : nums) {
             sum += n;
         }
+        // 当sum < s时，返回0，s+sum不为偶数时也直接返回0
         return sum < s || (s + sum) % 2 > 0 ? 0 : subsetSum(nums, (s + sum) / 2);
     }
 
