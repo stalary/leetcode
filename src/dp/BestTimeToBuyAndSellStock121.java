@@ -3,7 +3,7 @@ package dp;
 /**
  * dp.BestTimeToBuyAndSellStock121
  *
- * 购买股票的最好时机
+ * 购买股票的最好时机，仅允许买入卖出一支股票
  * @author lirongqian
  * @since 2018/03/26
  */
