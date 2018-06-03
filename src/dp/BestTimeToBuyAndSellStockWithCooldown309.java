@@ -16,12 +16,13 @@ public class BestTimeToBuyAndSellStockWithCooldown309 {
 
     /**
      * A further observation is that and rest[i] <= sell[i] is also true therefore
-     *
+     * <p>
      * rest[i] = sell[i-1]
      * Substitute this in to buy[i] we now have 2 functions instead of 3:
-     *
+     * <p>
      * buy[i] = max(sell[i-2]-price, buy[i-1])
      * sell[i] = max(buy[i-1]+price, sell[i-1])
+     *
      * @param prices
      * @return
      */
@@ -31,7 +32,7 @@ public class BestTimeToBuyAndSellStockWithCooldown309 {
         for (int price : prices) {
             // 上一次购买的最大利润
             prevBuy = buy;
-            // 比较本次买入和上上次买入的最大利润
+            // 比较本次买入和上上次买入的最大利润,preBuy为上上次买入的最大利润
             buy = Math.max(prevSell - price, prevBuy);
             // 上一次出售的最大利润
             prevSell = sell;
