@@ -17,6 +17,11 @@ public class BestTimeToBuyAndSellStockII122 {
         System.out.println(maxProfit(prices));
     }
 
+    /**
+     * 直接将差值为正的相加即可
+     * @param prices
+     * @return
+     */
     public static int maxProfit(int[] prices) {
         int sum = 0;
         for (int i = 0; i < prices.length - 1; i++) {
