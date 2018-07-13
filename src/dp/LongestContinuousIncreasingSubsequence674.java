@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * dp.LongestContinuousIncreasingSubsequence674
  *
- * 找出最长的递增子序列
+ * 最长连续递增子序列
  * @author lirongqian
  * @since 2018/04/04
  */
