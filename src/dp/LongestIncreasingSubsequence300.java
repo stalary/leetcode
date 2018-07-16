@@ -36,4 +36,27 @@ public class LongestIncreasingSubsequence300 {
         }
         return len;
     }
+
+    public int lengthOfLIS1(int[] array) {
+        // 用于记录当前元素作为最大元素的最长递增序列的长度
+        int[] lisLength = new int[array.length];
+        // 初始化
+        for (int i = 0; i < array.length; i++) {
+            lisLength[i] = 1;
+        }
+        int max = 1;
+        for (int i = 1; i < array.length; i++) {
+            for (int j = 0; j < i; j++) {
+                // 当递增并且后移一位大于当前最大长度时，进行替换
+                if (array[j] < array[i] && lisLength[j] + 1 > lisLength[i]) {
+                    lisLength[i] = lisLength[j] + 1;
+                }
+                // 得到当前最长递增序列的长度以及该子序列的最末元素的位置
+                if (max < lisLength[i]) {
+                    max = lisLength[i];
+                }
+            }
+        }
+        return max;
+    }
 }
