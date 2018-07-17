@@ -45,6 +45,7 @@ public class LongestValidParentheses32 {
      */
     public static int longestValidParentheses1(String s) {
         int len = s.length();
+        // dp数组
         int[] maxes = new int[len];
         // 左括号的数量
         int leftCnt = 0, max = 0;
