@@ -19,8 +19,8 @@ public class LongestValidParentheses32 {
         int max = 0;
         int min = 0;
         for (int i = 0; i < s.length(); i++) {
-            char curr = s.charAt(i);
-            if (curr == '(') {
+            char cur = s.charAt(i);
+            if (cur == '(') {
                 count++;
                 map.put(count, i);
             } else {
