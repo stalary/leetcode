@@ -33,6 +33,7 @@ public class PerfectSquares279 {
      */
     public int numSquares(int n) {
         int[] dp = new int[n + 1];
+        // 求最小值，所以全部设置为最大值
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
         for (int i = 1; i <= n; i++) {
