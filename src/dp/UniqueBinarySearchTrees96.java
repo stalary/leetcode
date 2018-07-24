@@ -1,4 +1,5 @@
-package dp; /**
+package dp;
+/**
  * @(#)UniqueBinarySearchTrees96.java, 2018-06-03.
  * <p>
  * Copyright 2018 Stalary.
@@ -18,6 +19,7 @@ public class UniqueBinarySearchTrees96 {
         num[1] = 1;
         for (int level = 2; level <= n; level++) {
             for (int root = 1; root <= level; root++) {
+                // 每次取子节点
                 num[level] += num[root - 1] * num[level - root];
             }
         }
