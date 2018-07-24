@@ -9,12 +9,6 @@ package dp;
  */
 public class TargetSum494 {
 
-    public static void main(String[] args) {
-        System.out.println(new TargetSum494().findTargetSumWays(new int[]{
-                1, 2, 3
-        }, 2));
-    }
-
     /**
      * 1，2，3，4，5 target=3-》
      * +1-2+3-4+5 = 3
@@ -55,4 +49,11 @@ public class TargetSum494 {
         }
         return dp[s];
     }
+
+    public static void main(String[] args) {
+        System.out.println(new TargetSum494().findTargetSumWays(new int[]{
+                1, 2, 3
+        }, 2));
+    }
+
 }
