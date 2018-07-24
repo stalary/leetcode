@@ -12,7 +12,7 @@ public class TargetSum494 {
     public static void main(String[] args) {
         System.out.println(new TargetSum494().findTargetSumWays(new int[]{
                 1, 2, 3
-        }, 0));
+        }, 2));
     }
 
     /**
@@ -49,6 +49,7 @@ public class TargetSum494 {
         dp[0] = 1;
         for (int n : nums) {
             for (int i = s; i >= n; i--) {
+                // 0-1背包问题
                 dp[i] += dp[i - n];
             }
         }
