@@ -34,6 +34,27 @@ public class AddOneRowToTree623 {
      *   / \     /
      *  3   1   5
      *
+     *  Input:
+     * A binary tree as following:
+     *       4
+     *      /
+     *     2
+     *    / \
+     *   3   1
+     *
+     * v = 1
+     *
+     * d = 3
+     *
+     * Output:
+     *       4
+     *      /
+     *     2
+     *    / \
+     *   1   1
+     *  /     \
+     * 3       1
+     *
      * @param root
      * @param v
      * @param d
@@ -41,10 +62,10 @@ public class AddOneRowToTree623 {
      */
     public TreeNode addOneRow(TreeNode root, int v, int d) {
         if (d == 0 || d == 1) {
-            TreeNode newroot = new TreeNode(v);
-            newroot.left = d == 1 ? root : null;
-            newroot.right = d == 0 ? root : null;
-            return newroot;
+            TreeNode newRoot = new TreeNode(v);
+            newRoot.left = d == 1 ? root : null;
+            newRoot.right = d == 0 ? root : null;
+            return newRoot;
         }
         // 当大于等于2时，添加左子树和右子树
         if (root != null && d >= 2) {
