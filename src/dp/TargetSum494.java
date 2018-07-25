@@ -43,8 +43,10 @@ public class TargetSum494 {
         dp[0] = 1;
         for (int n : nums) {
             for (int i = s; i >= n; i--) {
-                // 0-1背包问题
+                // 背包问题
                 dp[i] += dp[i - n];
+                // 前i个物品(即数字)中选出和(即容量)为j的方案数=所有前（i-1个）数中
+                // 选出若干个构成的和为i-n的方案数，这个循环表示当前第i个物品(数字)会被使用
             }
         }
         return dp[s];
