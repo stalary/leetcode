@@ -29,6 +29,7 @@ public class AddStrings415 {
             int x = i < 0 ? 0 : num1.charAt(i) - '0';
             int y = j < 0 ? 0 : num2.charAt(j) - '0';
             sb.append((x + y + carry) % 10);
+            // 进位
             carry = (x + y + carry) / 10;
         }
         return sb.reverse().toString();
