@@ -8,6 +8,13 @@
  */
 public class ArithmeticSlices413 {
 
+    public static void main(String[] args) {
+        int[] a = new int[] {
+                1, 3, 5, 7, 9, 11
+        };
+        System.out.println(new ArithmeticSlices413().numberOfArithmeticSlices(a));
+    }
+
     public int numberOfArithmeticSlices(int[] A) {
         if (A == null || A.length < 3) {
             return 0;
