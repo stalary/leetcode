@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /**
  * AverageofLevelsInBinaryTree637
- * <p>
+ *
  * 求二叉树每一层的平均值
  *
  * @author lirongqian
