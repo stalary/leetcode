@@ -10,7 +10,7 @@ public class BitCharacters717 {
 
     public static void main(String[] args) {
         int[] bits = new int[]{
-                1, 0, 0
+                1, 1, 1, 0
         };
         System.out.println(isOneBitCharacter(bits));
     }
@@ -29,6 +29,7 @@ public class BitCharacters717 {
                 i++;
             }
         }
+        // 此处可以直接判断出最后是否只剩下一个0
         return i == bits.length - 1;
     }
 }
