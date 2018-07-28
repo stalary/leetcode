@@ -42,7 +42,7 @@ public class BinaryTreeRightSideView199 {
         if(curr == null){
             return;
         }
-        // 当前层和数组中的元素数量相同时，即即代表该元素为当前层最右边的元素
+        // 当前层和数组中的元素数量相同时，即代表该元素为当前层最右边的元素
         if(currDepth == result.size()){
             result.add(curr.val);
         }
