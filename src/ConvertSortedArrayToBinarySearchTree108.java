@@ -13,16 +13,9 @@ public class ConvertSortedArrayToBinarySearchTree108 {
                 -10, -3, 0, 5, 9
         };
         TreeNode node = sortedArrayToBST(nums);
-        printTree(node);
+        System.out.println(node);
     }
 
-    public static void printTree(TreeNode node) {
-        if (node != null) {
-            System.out.println(node.val);
-            printTree(node.left);
-            printTree(node.right);
-        }
-    }
 
     public static TreeNode sortedArrayToBST(int[] nums) {
         if (nums.length == 0) {
