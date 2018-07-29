@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /**
  * ConstructTheRectangle492
@@ -10,8 +11,7 @@
 public class ConstructTheRectangle492 {
 
     public static void main(String[] args) {
-        System.out.println(constructRectangle(10000000)[0]);
-        System.out.println(constructRectangle(10000000)[1]);
+        System.out.println(Arrays.toString(constructRectangle(90)));
     }
 
     /**
