@@ -13,12 +13,20 @@ public class ConvertBSTToGreaterTree538 {
         root.left = new TreeNode(2);
         root.right = new TreeNode(13);
         TreeNode out = new ConvertBSTToGreaterTree538().convertBST(root);
-        System.out.println(out.val);
-        System.out.println(out.left.val);
-        System.out.println(out.right.val);
+        System.out.println(out);
     }
 
-
+    /**
+     * Input: The root of a Binary Search Tree like this:
+     *               5
+     *             /   \
+     *            2     13
+     *
+     * Output: The root of a Greater Tree like this:
+     *              18
+     *             /   \
+     *           20     13
+     */
     int sum = 0;
     public TreeNode convertBST(TreeNode root) {
         convert(root);
