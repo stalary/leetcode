@@ -31,12 +31,15 @@ public class DegreeOfAnArray697 {
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(nums[i])) {
                 map.get(nums[i])[0]++;
+                // 修改最后一次出现的位置
                 map.get(nums[i])[2] = i;
             } else {
                 // 当不存在时，初始化数组
                 int[] arr = new int[3];
                 arr[0] = 1;
+                // 设置第一次出现的位置
                 arr[1] = i;
+                // 设置最后一次出现的位置
                 arr[2] = i;
                 map.put(nums[i], arr);
             }
