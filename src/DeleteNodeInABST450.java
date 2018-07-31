@@ -40,6 +40,11 @@ public class DeleteNodeInABST450 {
         return root;
     }
 
+    /**
+     * 找到最左节点，即为最小值
+     * @param node
+     * @return
+     */
     private TreeNode findMin(TreeNode node) {
         while (node.left != null) {
             node = node.left;
