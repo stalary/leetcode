@@ -53,9 +53,7 @@ public class ValidSudoku36 {
                 }
                 // 转化成3*3矩阵
                 int rowIndex = 3 * (i / 3);
-                System.out.println("rowIndex:" + rowIndex);
                 int colIndex = 3 * (i % 3);
-                System.out.println("colIndex:" + colIndex);
                 if (board[rowIndex + j / 3][colIndex + j % 3] != '.'
                         && !cube.add(board[rowIndex + j / 3][colIndex + j % 3])) {
                     return false;
