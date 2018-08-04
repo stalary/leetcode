@@ -14,6 +14,20 @@ public class FindAllAnagramsInAString438 {
         System.out.println(new FindAllAnagramsInAString438().findAnagrams("abab", "ab"));
     }
 
+    /**
+     * Input:
+     * s: "cbaebabacd" p: "abc"
+     *
+     * Output:
+     * [0, 6]
+     *
+     * Explanation:
+     * The substring with start index = 0 is "cba", which is an anagram of "abc".
+     * The substring with start index = 6 is "bac", which is an anagram of "abc".
+     * @param s
+     * @param p
+     * @return
+     */
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> list = new ArrayList<>();
         if (s == null || s.length() == 0 || p == null || p.length() == 0) {
@@ -28,7 +42,7 @@ public class FindAllAnagramsInAString438 {
         }
         int left = 0, right = 0, count = p.length();
         while (right < s.length()) {
-            // 移动right，当存在于p中时，count--
+            // 移动right，当存在于p中时，count--，先判断，再递减
             if (hash[s.charAt(right++)]-- >= 1) {
                 count--;
             }
