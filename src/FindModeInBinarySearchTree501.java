@@ -33,7 +33,6 @@ public class FindModeInBinarySearchTree501 {
 
         List<Integer> list = new ArrayList<>();
         traverse(root, list);
-
         int[] res = new int[list.size()];
         for (int i = 0; i < list.size(); ++i) {
             res[i] = list.get(i);
