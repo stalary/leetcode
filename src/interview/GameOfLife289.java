@@ -21,11 +21,19 @@ public class GameOfLife289 {
      * 2.活细胞周围有两个或者三个活细胞就会存活
      * 3.活细胞周围有多余三个活细胞就会死亡
      * 4.死细胞周围有刚好三个活细胞就会复活
+     * [2nd bit, 1st bit] = [next state, current state]
+     *
+     * - 00  dead (next) <- dead (current)
+     * - 01  dead (next) <- live (current)
+     * - 10  live (next) <- dead (current)
+     * - 11  live (next) <- live (current)
      *
      * @param board
      */
     public void gameOfLife(int[][] board) {
-        if (board == null || board.length == 0) return;
+        if (board == null || board.length == 0) {
+            return;
+        }
         int m = board.length, n = board[0].length;
 
         for (int i = 0; i < m; i++) {
@@ -52,6 +60,7 @@ public class GameOfLife289 {
 
     /**
      * 计算邻居节点的存活数
+     *
      * @param board
      * @param m
      * @param n
