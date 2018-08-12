@@ -9,7 +9,6 @@ import java.util.List;
  */
 public class MergeIntervals56 {
 
-
     public List<Interval> merge(List<Interval> intervals) {
         List<Interval> res = new ArrayList<>();
         if (intervals == null || intervals.size() < 1) {
