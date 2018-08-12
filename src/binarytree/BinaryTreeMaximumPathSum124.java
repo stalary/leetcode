@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * BinaryTreeMaximumPathSum124
+ * binarytree.BinaryTreeMaximumPathSum124
  * 求二叉树中最大的路径和
  * @author lirongqian
  * @since 2018/05/13
