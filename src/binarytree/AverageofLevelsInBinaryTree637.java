@@ -1,10 +1,12 @@
+package binarytree;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 /**
- * AverageofLevelsInBinaryTree637
+ * binarytree.AverageofLevelsInBinaryTree637
  *
  * 求二叉树每一层的平均值
  *
@@ -40,7 +42,7 @@ public class AverageofLevelsInBinaryTree637 {
         }
         q.add(root);
         while (!q.isEmpty()) {
-            // 第一次q只有root一个元素
+            // 当前层的元素
             int n = q.size();
             double sum = 0.0;
             for (int i = 0; i < n; i++) {
