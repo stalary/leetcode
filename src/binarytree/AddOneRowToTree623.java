@@ -1,6 +1,7 @@
+package binarytree;
 
 /**
- * AddOneRowToTree623
+ * binarytree.AddOneRowToTree623
  * <p>
  * 向二叉树中的指定深度插入指定的结点
  *
@@ -61,13 +62,14 @@ public class AddOneRowToTree623 {
      * @return
      */
     public TreeNode addOneRow(TreeNode root, int v, int d) {
+        // d=0代表添加到左子树，d=1代表添加到右子树
         if (d == 0 || d == 1) {
             TreeNode newRoot = new TreeNode(v);
             newRoot.left = d == 1 ? root : null;
             newRoot.right = d == 0 ? root : null;
             return newRoot;
         }
-        // 当大于等于2时，添加左子树和右子树
+        // 当大于等于2时，向下递归
         if (root != null && d >= 2) {
             root.left = addOneRow(root.left, v, d > 2 ? d - 1 : 1);
             root.right = addOneRow(root.right, v, d > 2 ? d - 1 : 0);
