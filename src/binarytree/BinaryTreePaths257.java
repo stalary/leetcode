@@ -1,10 +1,11 @@
+package binarytree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * BinaryTreePaths257
+ * binarytree.BinaryTreePaths257
  * <p>
  * 输入一颗二叉树，输出所有从根出发的路径
  *
@@ -14,9 +15,6 @@ import java.util.List;
  */
 public class BinaryTreePaths257 {
 
-    public static void main(String[] args) {
-
-    }
 
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> answer = new ArrayList<>();
@@ -31,6 +29,7 @@ public class BinaryTreePaths257 {
             // 当左右儿子都为空时，将路径添加到list里
             answer.add(path + root.val);
         }
+        // 递归查找左右子树
         if (root.left != null) {
             searchBT(root.left, path + root.val + "->", answer);
         }
