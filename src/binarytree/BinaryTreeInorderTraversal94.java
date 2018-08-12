@@ -1,9 +1,11 @@
+package binarytree;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 /**
- * BinaryTreeInorderTraversal94
+ * binarytree.BinaryTreeInorderTraversal94
  * <p>
  * 二叉树的中序遍历
  *
