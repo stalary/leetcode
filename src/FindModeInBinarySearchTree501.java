@@ -60,7 +60,7 @@ public class FindModeInBinarySearchTree501 {
         } else if (count == max) {
             list.add(root.val);
         }
-        // 赋值
+        // 存储上一个元素，方便判断是否相等
         prev = root.val;
         traverse(root.right, list);
     }
@@ -101,6 +101,7 @@ public class FindModeInBinarySearchTree501 {
             return;
         }
         help1(root.left);
+        // 遍历存储根节点，即中序遍历
         map.put(root.val, map.getOrDefault(root.val, 0) + 1);
         help1(root.right);
     }

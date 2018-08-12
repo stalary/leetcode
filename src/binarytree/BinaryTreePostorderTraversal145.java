@@ -1,9 +1,11 @@
+package binarytree;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
 /**
- * BinaryTreePostorderTraversal145
+ * binarytree.BinaryTreePostorderTraversal145
  * <p>
  * 后序打印二叉树
  *
@@ -28,7 +30,7 @@ public class BinaryTreePostorderTraversal145 {
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode cur = stack.pop();
-            // 根要最后在遍历，所以每次都要往头放，最后压到底部
+            // 根要最后在遍历，所以每次都要往头放，最后压到底部，先序遍历则是放到尾部
             ans.addFirst(cur.val);
             // 虽然栈弹出的顺序是与遍历顺序相反，但是因为每次放入list中是放在头部，所以此处左结点先入栈
             if (cur.left != null) {
