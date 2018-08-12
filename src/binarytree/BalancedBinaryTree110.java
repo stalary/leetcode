@@ -1,6 +1,7 @@
+package binarytree;
 
 /**
- * BalancedBinaryTree110
+ * binarytree.BalancedBinaryTree110
  *
  * 判断一颗二叉树是不是平衡二叉树
  * @author lirongqian
