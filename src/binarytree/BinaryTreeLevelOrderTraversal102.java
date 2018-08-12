@@ -1,3 +1,4 @@
+package binarytree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -5,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * BinaryTreeLevelOrderTraversal102
+ * binarytree.BinaryTreeLevelOrderTraversal102
  *
  * 二叉树的层序遍历，由根开始打印
  * @author lirongqian
@@ -14,9 +15,6 @@ import java.util.Queue;
  */
 public class BinaryTreeLevelOrderTraversal102 {
 
-    public static void main(String[] args) {
-
-    }
 
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
