@@ -1,7 +1,9 @@
+package binarytree;
+
 import java.util.*;
 
 /**
- * SerializeAndDeserializeBinaryTree297
+ * binarytree.SerializeAndDeserializeBinaryTree297
  * 序列化反序列化二叉树
  * @author lirongqian
  * @since 2018/04/18
@@ -14,7 +16,8 @@ public class SerializeAndDeserializeBinaryTree297 {
         node.right = new TreeNode(3);
         node.right.left = new TreeNode(4);
         node.right.right = new TreeNode(5);
-        System.out.println(new SerializeAndDeserializeBinaryTree297().serialize(node));
+        String serialize = new SerializeAndDeserializeBinaryTree297().serialize(node);
+        System.out.println(new SerializeAndDeserializeBinaryTree297().deserialize(serialize));
     }
 
     private static final String spliter = ",";
