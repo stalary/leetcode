@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * FindBottomLeftTreeValue513
+ * binarytree.FindBottomLeftTreeValue513
  *
  * 找到二叉树最左边底部元素
  * @author lirongqian
@@ -31,6 +33,7 @@ public class FindBottomLeftTreeValue513 {
     }
 
     public void findBottomLeftValue(TreeNode root, int depth) {
+        // 当继续深入时，添加元素
         if (h < depth) {
             ans = root.val;
             h = depth;
