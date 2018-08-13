@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * FlattenBinaryTreeToLinkedList114
+ * binarytree.FlattenBinaryTreeToLinkedList114
  * 将二叉树转为只有右节点的二叉树
  * @author lirongqian
  * @since 2018/04/16
@@ -23,6 +25,7 @@ public class FlattenBinaryTreeToLinkedList114 {
         }
         pre = flatten(root.right, pre);
         pre = flatten(root.left, pre);
+        // 将左节点赋值给右节点，然后左节点清空
         root.right = pre;
         root.left = null;
         pre = root;
