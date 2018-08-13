@@ -1,7 +1,10 @@
+package binarytree;
+
 /**
- * MaximumBinaryTree654
+ * binarytree.MaximumBinaryTree654
  * <p>
  * 构造一颗最大值的树
+ * 每个根都是最大值
  *
  * @author lirongqian
  * @since 2018/03/14
@@ -9,7 +12,10 @@
 public class MaximumBinaryTree654 {
 
     public static void main(String[] args) {
-
+        int[] num = new int[] {
+                3, 2, 1, 4, 5, 9
+        };
+        System.out.println(new MaximumBinaryTree654().constructMaximumBinaryTree(num));
     }
 
     /**
