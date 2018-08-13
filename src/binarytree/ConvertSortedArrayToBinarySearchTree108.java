@@ -1,6 +1,7 @@
+package binarytree;
 
 /**
- * ConvertSortedArrayToBinarySearchTree108
+ * binarytree.ConvertSortedArrayToBinarySearchTree108
  *
  * 将一个排好序的数组转化为一颗二叉搜索树
  * @author lirongqian
@@ -35,8 +36,8 @@ public class ConvertSortedArrayToBinarySearchTree108 {
         if (low > high) {
             return null;
         }
-        int mid = (high + low) / 2;
         // 将中点作为根
+        int mid = (high + low) / 2;
         TreeNode node = new TreeNode(nums[mid]);
         // 分别构造左右结点
         node.left = help(nums, low, mid - 1);
