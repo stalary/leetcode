@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * DiameterOfBinaryTree543
+ * binarytree.DiameterOfBinaryTree543
  *
  * 求二叉树的最长路径
  *
