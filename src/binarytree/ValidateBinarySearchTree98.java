@@ -1,7 +1,9 @@
+package binarytree;
+
 import java.util.Stack;
 
 /**
- * ValidateBinarySearchTree98
+ * binarytree.ValidateBinarySearchTree98
  * 判断是不是二叉搜索树
  *
  * @author lirongqian
@@ -26,9 +28,9 @@ public class ValidateBinarySearchTree98 {
                 stack.push(root);
                 root = root.left;
             }
-            // 根节点
+            // 找到根节点
             root = stack.pop();
-            // 判断是否符合二叉搜索树，当
+            // 判断是否符合二叉搜索树，当前一个节点大时，直接返回false
             if (pre != null && root.val <= pre.val) {
                 return false;
             }
@@ -52,6 +54,7 @@ public class ValidateBinarySearchTree98 {
         if(root.val >= max || root.val <= min) {
             return false;
         }
+        // 左节点小，右节点大
         return helper(root.left, min, root.val) && helper(root.right, root.val, max);
     }
 }
