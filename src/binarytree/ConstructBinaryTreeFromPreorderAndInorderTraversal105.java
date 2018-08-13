@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * ConstructBinaryTreeFromPreorderAndInorderTraversal105
+ * binarytree.ConstructBinaryTreeFromPreorderAndInorderTraversal105
  * 通过前序和中序构建二叉树
  * @author lirongqian
  * @since 2018/04/20
