@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * InvertBinaryTree226
+ * binarytree.InvertBinaryTree226
  *
  * 交换二叉树的左右结点
  *
@@ -33,6 +35,7 @@ public class InvertBinaryTree226 {
         // 递归的交换左右的结点
         TreeNode node = root.left;
         root.left = invertTree(root.right);
+        // node为提前保存的左节点
         root.right = invertTree(node);
         return root;
     }
