@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * DeleteNodeInABST450
+ * binarytree.DeleteNodeInABST450
  *
  * 在二叉搜索树中删除一个结点
  * @author lirongqian
@@ -26,13 +28,13 @@ public class DeleteNodeInABST450 {
         } else if (key > root.val) {
             root.right = deleteNode(root.right, key);
         } else {
-            // 当找到目标结点时，如果左儿子为空，则可以直接将左儿子上移，右儿子类似
+            // 当找到目标结点时，如果左儿子为空，则可以直接将右儿子上移，右儿子类似
             if (root.left == null) {
                 return root.right;
             } else if (root.right == null) {
                 return root.left;
             }
-            // 如果左右儿子都不为空，则找到右子树中的最小值，然后递归的删除右子树中的最小r
+            // 如果左右儿子都不为空，则找到右子树中的最小值(最左节点)，将最小值赋值给当前节点，然后递归删除最小值
             TreeNode minNode = findMin(root.right);
             root.val = minNode.val;
             root.right = deleteNode(root.right, root.val);
