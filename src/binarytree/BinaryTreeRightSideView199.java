@@ -1,9 +1,10 @@
+package binarytree;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * BinaryTreeRightSideView199
+ * binarytree.BinaryTreeRightSideView199
  *
  * 输出在右边可以直接接触到的结点
  * @author lirongqian
@@ -43,6 +44,8 @@ public class BinaryTreeRightSideView199 {
             return;
         }
         // 当前层和数组中的元素数量相同时，即代表该元素为当前层最右边的元素
+        // 初始，存储根节点，第一层，存储右边元素
+        // 每次都存储最右边的元素，如果没有存储左子树的最右节点
         if(currDepth == result.size()){
             result.add(curr.val);
         }
