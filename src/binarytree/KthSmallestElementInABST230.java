@@ -1,7 +1,9 @@
+package binarytree;
+
 import java.util.Stack;
 
 /**
- * KthSmallestElementInABST230
+ * binarytree.KthSmallestElementInABST230
  * <p>
  * 在二叉搜索树中查找第k小的元素
  *
@@ -31,6 +33,7 @@ public class KthSmallestElementInABST230 {
         TreeNode temp = root;
         int count = 0;
         while (temp != null || !stack.isEmpty()) {
+            // 找最左节点
             while (temp != null) {
                 stack.push(temp);
                 temp = temp.left;
@@ -60,9 +63,10 @@ public class KthSmallestElementInABST230 {
         int count = countNodes(root.left);
         // 判断完范围再进行搜索
         if (k <= count) {
+            // 查找左子树
             return kthSmallest(root.left, k);
         } else if (k > count + 1) {
-            // 1 is counted as current node
+            // 查找右子树
             return kthSmallest(root.right, k - 1 - count);
         }
         return root.val;
