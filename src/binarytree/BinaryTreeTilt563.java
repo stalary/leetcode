@@ -1,3 +1,4 @@
+package binarytree;
 
 /**
  * BinaryTreeTilt
@@ -39,6 +40,7 @@ public class BinaryTreeTilt563 {
         }
         int left = findTilt(root.left);
         int right = findTilt(root.right);
+        // 求绝对值
         sum += Math.abs(left - right);
         return left + right + root.val;
     }
