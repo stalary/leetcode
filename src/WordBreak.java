@@ -24,6 +24,7 @@ public class WordBreak {
     }
 
     private boolean wordBreak(String s, List<String> wordDict, Set<String> cache) {
+        // 当存在不满足的元素时，直接返回false
         if (cache.contains(s)) {
             return false;
         }
