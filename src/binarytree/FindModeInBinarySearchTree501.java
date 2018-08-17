@@ -1,10 +1,12 @@
+package binarytree;
 
 import java.util.*;
 
 /**
- * FindModeInBinarySearchTree501
+ * binarytree.FindModeInBinarySearchTree501
  *
  * 查找二叉搜索树中出现次数最多的结点
+ *
  * @author lirongqian
  * @since 2018/03/27
  */
@@ -17,12 +19,14 @@ public class FindModeInBinarySearchTree501 {
         System.out.println(Arrays.toString(new FindModeInBinarySearchTree501().findMode1(root)));
     }
 
+    /** 前一个节点 **/
     private Integer prev = null;
     private int count = 1;
     private int max = 0;
 
     /**
      * 按中序遍历二叉搜索树，即为顺序遍历，如果值相同，count++，不相同，替换count，最后更新max，添加val
+     *
      * @param root
      * @return
      */
@@ -40,6 +44,12 @@ public class FindModeInBinarySearchTree501 {
         return res;
     }
 
+    /**
+     * 中序遍历
+     *
+     * @param root
+     * @param list
+     */
     private void traverse(TreeNode root, List<Integer> list) {
         if (root == null) {
             return;
@@ -96,6 +106,7 @@ public class FindModeInBinarySearchTree501 {
     }
 
     Map<Integer, Integer> map = new HashMap<>();
+
     public void help1(TreeNode root) {
         if (root == null) {
             return;
