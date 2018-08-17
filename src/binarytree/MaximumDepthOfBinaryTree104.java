@@ -1,6 +1,7 @@
+package binarytree;
 
 /**
- * MaximumDepthOfBinaryTree104
+ * binarytree.MaximumDepthOfBinaryTree104
  * 求二叉树最大深度
  * @author lirongqian
  * @since 2018/05/22
@@ -8,7 +9,7 @@
 public class MaximumDepthOfBinaryTree104 {
 
     /**
-     * 去最大深度，递归查找左右子树即可，每次+1
+     * 最大深度，递归查找左右子树即可，每次+1
      * @param root
      * @return
      */
