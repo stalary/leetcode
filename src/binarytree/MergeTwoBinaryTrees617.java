@@ -1,5 +1,7 @@
+package binarytree;
+
 /**
- * MergeTwoBinaryTrees617
+ * binarytree.MergeTwoBinaryTrees617
  *
  * 合并两个二叉树
  * @author lirongqian
