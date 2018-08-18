@@ -4,6 +4,7 @@ import java.util.*;
  * TopKFrequentElements347
  * 输出出现频繁的k种数字的数组
  * [1,1,1,2,2,3] and k = 2, return [1,2]
+ * 返回k个频繁出现的数
  *
  * @author lirongqian
  * @since 2018/04/04
@@ -18,6 +19,7 @@ public class TopKFrequentElements347 {
     }
 
     public List<Integer> topKFrequent1(int[] nums, int k) {
+        // 存储值和次数的映射
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : nums) {
             map.put(i, map.getOrDefault(i, 0) + 1);
@@ -29,28 +31,18 @@ public class TopKFrequentElements347 {
         int count = 0;
         System.out.println(list);
         // 存入key
-        for (Map.Entry<Integer, Integer> mapping : list) {
-            if (count == k) {
-                break;
-            }
-            result.add(mapping.getKey());
-            count++;
+        for (int i = 0; i < k; i++) {
+            result.add(list.get(i).getKey());
         }
         return result;
     }
 
-    /**
-     * 使用优先队列进行存储对象，弹出最大
-     * @param nums
-     * @param k
-     * @return
-     */
     public List<Integer> topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : nums) {
             map.put(i, map.getOrDefault(i, 0) + 1);
         }
-        PriorityQueue<Pair> pairs = new PriorityQueue<>();
+        PriorityQueue<Pair> pairs = new PriorityQueue<>(Comparator.comparing(a -> a.count));
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             pairs.add(new Pair(entry.getKey(), entry.getValue()));
         }
@@ -58,11 +50,10 @@ public class TopKFrequentElements347 {
         for (int i = 0; i < k; i++) {
             result.add(pairs.poll().num);
         }
-
         return result;
     }
 
-    public static class Pair implements Comparable<Pair> {
+    public static class Pair{
 
         int num;
         int count;
@@ -70,19 +61,6 @@ public class TopKFrequentElements347 {
         public Pair(int num, int count) {
             this.num = num;
             this.count = count;
-        }
-
-        @Override
-        public int compareTo(Pair other) {
-            return other.count - this.count;
-        }
-
-        @Override
-        public String toString() {
-            return "Pair{" +
-                    "num=" + num +
-                    ", count=" + count +
-                    '}';
         }
     }
 
