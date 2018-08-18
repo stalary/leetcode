@@ -10,6 +10,10 @@ import java.util.List;
  */
 public class TheSkylineProblem218 {
 
+    /**
+     * 三个点分别为，左右边缘x坐标，高度
+     * @param args
+     */
     public static void main(String[] args) {
         System.out.println(new TheSkylineProblem218().getSkyline(new int[][]{
                 {2, 9, 10}, {3, 7, 15}, {5, 12, 12}, {15, 20, 10}, {19, 24, 8}
@@ -32,7 +36,9 @@ public class TheSkylineProblem218 {
             return res;
         } else if (lo == hi) {
             // 存入最高点和最低点，最低点一定纵坐标为0
+            // 长度
             res.add(new int[]{buildings[lo][0], buildings[lo][2]});
+            // 高度
             res.add(new int[]{buildings[lo][1], 0});
             return res;
         }
