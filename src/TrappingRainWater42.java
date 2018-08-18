@@ -27,13 +27,16 @@ public class TrappingRainWater42 {
         int leftMax = 0;
         int rightMax = 0;
         while (a <= b) {
+            // 计算左侧最大值
             leftMax = Math.max(leftMax, height[a]);
+            // 计算右侧最大值
             rightMax = Math.max(rightMax, height[b]);
             if (leftMax < rightMax) {
-                // leftMax is smaller than rightMax, so the (leftMax-A[a]) water can be stored
+                // 当左侧最大值大于右侧最大值时，存储左侧最大值减去当前值，并向后移动
                 max += (leftMax - height[a]);
                 a++;
             } else {
+                // 否则，存储右侧最大值减去当前值，并向前移动
                 max += (rightMax - height[b]);
                 b--;
             }
