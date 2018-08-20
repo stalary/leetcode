@@ -19,7 +19,7 @@ public class TaskScheduler621 {
      * Input: tasks = ["A","A","A","B","B","B"], n = 2
      * Output: 8
      * Explanation: A -> B -> idle -> A -> B -> idle -> A -> B.
-     * n=2代表每个任务之间不能存在两个相同的任务，所以2 + 1 + 2 + 1 + 2 = 8
+     * n=2代表两个相同任务直接必须有2个间隔，所以2 + 1 + 2 + 1 + 2 = 8
      * @param tasks
      * @param n
      * @return
