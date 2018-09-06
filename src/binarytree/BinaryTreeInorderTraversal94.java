@@ -15,9 +15,11 @@ import java.util.Stack;
 public class BinaryTreeInorderTraversal94 {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
+        TreeNode root = new TreeNode(4);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
+        root.left = new TreeNode(5);
+//        new BinaryTreeInorderTraversal94().inorder(root);
         System.out.println(new BinaryTreeInorderTraversal94().inorderTraversal(root));
     }
 
