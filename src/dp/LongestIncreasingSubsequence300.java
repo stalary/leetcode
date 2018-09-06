@@ -24,12 +24,14 @@ public class LongestIncreasingSubsequence300 {
         int[] dp = new int[nums.length];
         int len = 0;
         for (int x : nums) {
-            // 通过二分来维护一个low数组
+            // 通过二分来维护一个low数组，未命中时，返回待插入位置前一个的负数
             int i = Arrays.binarySearch(dp, 0, len, x);
+            System.out.println(i);
             if (i < 0) {
                 i = -(i + 1);
             }
             dp[i] = x;
+            // 只有增加新元素时，才增加长度，替换时不改变
             if (i == len) {
                 len++;
             }
