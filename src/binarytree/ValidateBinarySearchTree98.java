@@ -1,6 +1,7 @@
 package binarytree;
 
-import java.util.Stack;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * binarytree.ValidateBinarySearchTree98
@@ -11,12 +12,39 @@ import java.util.Stack;
  */
 public class ValidateBinarySearchTree98 {
 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String inStr = in.nextLine();
+        String[] split = inStr.split(",");
+        List<Integer> inList = Arrays.stream(split).map(Integer::new).collect(Collectors.toList());
+        Integer[] integers = inList.toArray(new Integer[]{});
+        TreeNode tree = createBinaryTreeByArray(integers, 0);
+        System.out.println(isValidBST(tree) ? "True" : "False");
+    }
+
+    private static TreeNode createBinaryTreeByArray(Integer[] array, int index) {
+        TreeNode treeNode = null;
+        if (index < array.length) {
+            Integer value = array[index];
+            if (value == null) {
+                // null不插入
+                return null;
+            }
+            treeNode = new TreeNode(value);
+            treeNode.left = createBinaryTreeByArray(array, 2 * index + 1);
+            treeNode.right = createBinaryTreeByArray(array, 2 * index + 2);
+            return treeNode;
+        }
+        return treeNode;
+    }
+
     /**
      * 中序遍历的变形
+     *
      * @param root
      * @return
      */
-    public boolean isValidBST(TreeNode root) {
+    public static boolean isValidBST(TreeNode root) {
         if (root == null) {
             return true;
         }
@@ -46,12 +74,12 @@ public class ValidateBinarySearchTree98 {
         return helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
-    public boolean helper(TreeNode root, long min, long max){
-        if(root == null) {
+    public boolean helper(TreeNode root, long min, long max) {
+        if (root == null) {
             return true;
         }
         // 当前元素不满足条件时跳出
-        if(root.val >= max || root.val <= min) {
+        if (root.val >= max || root.val <= min) {
             return false;
         }
         // 左节点小，右节点大
